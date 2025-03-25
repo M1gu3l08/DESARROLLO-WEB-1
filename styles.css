@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+}
+
+.topnav{
+    margin-top: 10px; 
+    margin-left: 40px;
+}
+
+.iniciales{ 
+    color: #348829;
+    font-family: Arial;
+    border-left: 2px solid #f2f7f4;
+    padding: 0 10px;
+}
+
+.iconostyle{
+    color: green;
+    margin: 5px;
+}
