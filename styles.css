@@ -3,8 +3,9 @@ body{
 }
 
 .topnav{
-    margin-top: 10px; 
-    margin-left: 40px;
+    margin-top: 15px; 
+    margin-left: 30px;
+    line-height: 2;
 }
 
 .iniciales{ 
@@ -12,9 +13,120 @@ body{
     font-family: Arial;
     border-left: 2px solid #f2f7f4;
     padding: 0 10px;
+    font-size: 15px;
 }
 
 .iconostyle{
     color: green;
     margin: 5px;
+    align-content: flex-start;
+}
+
+.imglogo{
+    height: 70px;
+    margin-left: 30px;
+}
+
+.secondnav {
+    margin-top: 7px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menulinks {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.cssnav{
+    color: black;
+    margin-left: 40px;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.imgbig{
+    margin-top: 30px;
+    width: 100%;
+}
+
+main{
+    margin: 0px;
+}
+
+.menuinfo {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    padding-right: 70px;
+}
+
+.iconov{
+    font-size: 40px;
+    color: #8ec552;
+}
+
+.num1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8ec552;
+}
+
+.menuinfo p {
+    margin: 5px 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.iconofinal{
+    font-size: 65px;
+    color: #8ec552;
+}
+
+.imgestereo{
+    width: 100%;
+    display: block;
+}
+
+.articulos{
+    padding-top: 10px;
+    background-color: #62b0bd;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+}
+
+.primerarticulo{
+    height: 400px;
+    width: 730px;
+}
+
+.fila2{
+    padding-top: 10px;
+    display: flex;
+}
+
+.segundoarticulo{
+    height: 217px;
+    width: 365px;
+}
+
+.tercerarticulo{
+    height: 217px;
+    width: 365px;
+}
+
+.articulogrande{
+    height: 630px;
+    width: 730px;
 }
