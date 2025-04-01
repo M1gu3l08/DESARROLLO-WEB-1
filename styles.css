@@ -132,7 +132,7 @@ main{
 }
 
 .encabezado1 {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     text-align: center;
     margin: 20px 0;
 }
@@ -155,6 +155,7 @@ main{
    text-align: right;
 }
 
+
 .caratulas{
     display: flex;
     justify-content: center;
@@ -165,4 +166,49 @@ main{
     margin-left: 100px;
     height: 320px;
     width: 270px;
+}
+
+.titulocanales{
+    margin-left: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 37px; 
+}
+
+.canales{
+    margin-left: 30px;
+    display: flex;
+}
+
+.canal{
+    margin-right: 60px;
+    height: 190px;
+    width: 320px;
+}
+
+iframe{
+    height: 190px;
+    width: 320px;
+}
+
+.encabezado2 {
+    font-family: Arial;
+    text-align: center;
+    margin: 20px 0;
+    margin-right: 30px;
+}
+
+.secundario2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 10px;
+ }
+
+ .imgbig2{
+    margin-top: 30px;
+    width: 100%;
+    height: 770px;
 }
