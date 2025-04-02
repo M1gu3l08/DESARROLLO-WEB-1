@@ -256,4 +256,29 @@ iframe{
     font-size: 30px;
     color: #000;
     margin-right: 10px;
-} 
+}
+
+.finallinks{
+    height: 270px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid black;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.column {
+    line-height: 1;
+    color: #333C4E;
+}
+
+.finalinfo{
+    font-family: Arial;
+    align-content: center;
+    line-height: 0.5;
+    justify-items: center;
+    font-size: 11px;
+}
