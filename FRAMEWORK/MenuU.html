@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-montserrat">
+
+    <header>
+        <div class="flex">
+            <div class="bg-blue-300 w-56 hidden md:block">
+                <img src="IMG/unicordoba_logo.png" alt="LOGO_U">
+            </div>
+
+            <div class="bg-blue-100 flex-1 p-2">
+                <label for="toggle-menu" class="md:hidden block cursor-pointer">
+                    <i class="bx bx-menu bg-indigo-500 text-white text-3xl p-1 rounded-md"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="flex">
+            <input id="toggle-menu" type="checkbox" class="hidden peer" />
+
+            <div class="peer-checked:block hidden bg-blue-200 w-56 h-screen px-2 py-3 md:block">
+                <div class="text-center hover:bg-indigo-700 bg-indigo-500 text-white rounded-md py-2">
+                    <i class='bx bxs-user'></i>
+                    Estudiantes
+                </div>
+                <div class="text-center hover:bg-indigo-700 bg-indigo-500 text-white rounded-md py-2 mt-4">
+                    <i class='bx bx-user-plus'></i>
+                    Registrar Estudiante
+                </div>
+            </div>
+
+            <div class="max-w-sm mx-auto mb-4 p-4 bg-white rounded-md shadow-md">
+                <form>
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre
+                            del estudiante</label>
+                        <input type="text" id="name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Juan Pérez" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="document"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Documento</label>
+                        <input type="text" id="document"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="1002458796" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="program"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Programa</label>
+                        <input type="text" id="program"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Ingeniería de Sistemas" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="average"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Promedio</label>
+                        <input type="number" id="average"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="4.5" required />
+                    </div>
+                    <button type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Registrar</button>
+                </form>
+            </div>
+
+            <div class="bg-blue-50 flex-1 bg-gray-200 p-2">
+                <div class="bg-white rounded-md p-4">
+                    <div class="text-2xl p-4 font-bold">
+                        Listado de Estudiantes
+                    </div>
+
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead
+                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Nombre del estudiante</th>
+                                    <th scope="col" class="px-6 py-3">Documento</th>
+                                    <th scope="col" class="px-6 py-3">Programa</th>
+                                    <th scope="col" class="px-6 py-3">Promedio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Juan Pérez
+                                    </th>
+                                    <td class="px-6 py-4">1002458796</td>
+                                    <td class="px-6 py-4">Ingeniería de Sistemas</td>
+                                    <td class="px-6 py-4">4.5</td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        María
+                                        Gómez</th>
+                                    <td class="px-6 py-4">1011587623</td>
+                                    <td class="px-6 py-4">Psicología</td>
+                                    <td class="px-6 py-4">4.3</td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Andrés
+                                        López</th>
+                                    <td class="px-6 py-4">1009876543</td>
+                                    <td class="px-6 py-4">Administración de Empresas</td>
+                                    <td class="px-6 py-4">4.7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
