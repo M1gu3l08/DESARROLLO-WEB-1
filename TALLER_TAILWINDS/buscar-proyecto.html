@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Proyecto</title>
+    <title>Buscar Proyecto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -21,8 +21,7 @@
         <div class="p-1 w-4/6">
             <div>
                 <!-- Breadcrumb -->
-                <nav class="flex px-5 py-3 text-gray-700 rounded-lg "
-                    aria-label="Breadcrumb">
+                <nav class="flex px-5 py-3 text-gray-700 rounded-lg " aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
@@ -42,8 +41,8 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
-                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Crear
+                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/buscar-proyecto.html"
+                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Buscar
                                     Proyecto</a>
                             </div>
                         </li>
@@ -53,65 +52,30 @@
 
             <div>
                 <div class="text-2xl p-4 font-bold m-8">
-                    FORMULARIO PARA CREAR PROYECTO
+                    BUSCAR PROYECTO
                 </div>
                 <!-- Contenido principal -->
                 <form class="max-w-sm mx-auto">
-                    <div class="mb-5">
-                        <label for="idproyecto" class="block mb-2 text-sm font-medium text-black">ID Proyecto</label>
-                        <input type="text" id="idproyecto"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
+                    <label for="buscar-proyecto" class="block mb-2 text-sm font-medium text-black">
+                        Buscar Proyecto
+                    </label>
+                    <div class="flex">
+                        <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md ">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2a8 8 0 105.293 14.293l3.147 3.147a1 1 
+        0 001.414-1.414l-3.147-3.147A8 8 0 0010 2zM4 10a6 6 0 1112 0A6 6 0 014 10z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <input type="text" id="buscar-proyecto"
+                            class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+                            placeholder="Nombre, ID o fecha...">
+                            <button type="submit"
+                        class=" text-white bg-lime-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">BUSCAR</button>
                     </div>
-                    <div class="mb-5">
-                        <label for="nombre" class="block mb-2 text-sm font-medium text-black">Nombre</label>
-                        <input type="text" id="nombre"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="descripcion" class="block mb-2 text-sm font-medium text-black">Descripcion</label>
-                        <textarea id="descripcion" rows="4"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required></textarea>
-                    </div>
-                    <div id="date-range-picker" date-rangepicker class="flex items-center">
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-start" name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha inicio">
-                        </div>
-                        <span class="mx-4 text-gray-500">hasta</span>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-end" name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha final">
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <label for="valor" class="block mb-2 text-sm font-medium text-black">Valor</label>
-                        <input type="text" id="valor"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-
-                    <button type="submit"
-                        class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">CREAR</button>
                 </form>
+
             </div>
 
         </div>

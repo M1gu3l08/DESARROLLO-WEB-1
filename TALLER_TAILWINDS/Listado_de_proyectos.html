@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Proyecto</title>
+    <title>Listado De Proyectos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -21,8 +21,7 @@
         <div class="p-1 w-4/6">
             <div>
                 <!-- Breadcrumb -->
-                <nav class="flex px-5 py-3 text-gray-700 rounded-lg "
-                    aria-label="Breadcrumb">
+                <nav class="flex px-5 py-3 text-gray-700 rounded-lg" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
@@ -42,9 +41,10 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
-                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Crear
-                                    Proyecto</a>
+                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/Listado_de_proyectos.html"
+                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Listado
+                                    de
+                                    Proyectos</a>
                             </div>
                         </li>
                     </ol>
@@ -53,65 +53,126 @@
 
             <div>
                 <div class="text-2xl p-4 font-bold m-8">
-                    FORMULARIO PARA CREAR PROYECTO
+                    LISTADO DE PROYECTOS
                 </div>
                 <!-- Contenido principal -->
-                <form class="max-w-sm mx-auto">
-                    <div class="mb-5">
-                        <label for="idproyecto" class="block mb-2 text-sm font-medium text-black">ID Proyecto</label>
-                        <input type="text" id="idproyecto"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="nombre" class="block mb-2 text-sm font-medium text-black">Nombre</label>
-                        <input type="text" id="nombre"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="descripcion" class="block mb-2 text-sm font-medium text-black">Descripcion</label>
-                        <textarea id="descripcion" rows="4"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required></textarea>
-                    </div>
-                    <div id="date-range-picker" date-rangepicker class="flex items-center">
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-start" name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha inicio">
-                        </div>
-                        <span class="mx-4 text-gray-500">hasta</span>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-end" name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha final">
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <label for="valor" class="block mb-2 text-sm font-medium text-black">Valor</label>
-                        <input type="text" id="valor"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg ml-8">
+                    <table class="w-full text-sm text-left rtl:text-right text-black ">
+                        <thead class="text-xs text-black uppercase bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    ID Proyecto
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Nombre
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Descripción
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Fecha de Inicio
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Fecha de Fin
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Valor
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                    PRJ001
+                                </th>
+                                <td class="px-6 py-4">
+                                    Sistema de Riego Automatizado
+                                </td>
+                                <td class="px-6 py-4">
+                                    Proyecto basado en ESP32 para monitorear y automatizar el riego agrícola.
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-08-01
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-11-30
+                                </td>
+                                <td class="px-6 py-4">
+                                    $2,500,000 COP
+                                </td>
+                            </tr>
+                            <tr
+                                class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                    PRJ002
+                                </th>
+                                <td class="px-6 py-4">
+                                    Plataforma de Tutorías Virtuales
+                                </td>
+                                <td class="px-6 py-4">
+                                    Desarrollo web para conectar tutores y estudiantes de secundaria.
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-07-15
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-12-15
+                                </td>
+                                <td class="px-6 py-4">
+                                    $3,800,000 COP
+                                </td>
+                            </tr>
+                            <tr
+                                class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                    PRJ003
+                                </th>
+                                <td class="px-6 py-4">
+                                    App de Reporte Ciudadano
+                                </td>
+                                <td class="px-6 py-4">
+                                    Aplicación móvil para reportar fallas de infraestructura en Córdoba.
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-06-01
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-09-30
+                                </td>
+                                <td class="px-6 py-4">
+                                    $1,900,000 COP
+                                </td>
+                            </tr>
+                            <tr
+                                class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium textblack whitespace-nowrap">
+                                    PRJ004
+                                </th>
+                                <td class="px-6 py-4">
+                                    Sistema de Inventario Web
+                                </td>
+                                <td class="px-6 py-4">
+                                    Sistema en línea para gestión de inventario en pequeñas empresas.
+                                </td>
+                                <td class="px-6 py-4">
+                                    2024-10-01
+                                </td>
+                                <td class="px-6 py-4">
+                                    2025-01-31
+                                </td>
+                                <td class="px-6 py-4">
+                                    $2,200,000 COP
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <button type="submit"
-                        class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">CREAR</button>
-                </form>
             </div>
 
         </div>
@@ -151,8 +212,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/Listado_de_proyectos.html"
-                            class="flex items-center p-2 text-black rounded-lg hover:bg-lime-100  group">
+                        <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/Listado_de_proyectos.html" class="flex items-center p-2 text-black rounded-lg hover:bg-lime-100  group">
                             <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill-rule="evenodd"
@@ -228,7 +288,7 @@
             <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Sobre mí</h2>
-                    <ul class="text-gray-500 dark:text-gray-900 font-medium">
+                    <ul class="text-gray-900 font-medium">
                         <li class="mb-4">
                             <a href="#about" class="hover:underline">Perfil</a>
                         </li>
@@ -245,7 +305,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Recursos</h2>
-                    <ul class="text-gray-500 dark:text-gray-900 font-medium">
+                    <ul class="text-gray-900 font-medium">
                         <li class="mb-4">
                             <a href="https://github.com/" target="_blank" class="hover:underline">GitHub</a>
                         </li>
@@ -260,7 +320,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                    <ul class="text-gray-500 dark:text-gray-900 font-medium">
+                    <ul class="text-gray-900 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Política de privacidad</a>
                         </li>
@@ -271,7 +331,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Tecnologías</h2>
-                    <ul class="text-gray-500 dark:text-gray-900 font-medium">
+                    <ul class="text-gray-900 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">HTML & CSS</a>
                         </li>
