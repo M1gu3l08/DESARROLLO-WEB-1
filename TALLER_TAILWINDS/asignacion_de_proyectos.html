@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Proyecto</title>
+    <title>Asignacion de proyectos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -21,8 +21,7 @@
         <div class="p-1 w-4/6">
             <div>
                 <!-- Breadcrumb -->
-                <nav class="flex px-5 py-3 text-gray-700 rounded-lg "
-                    aria-label="Breadcrumb">
+                <nav class="flex px-5 py-3 text-gray-700 rounded-lg " aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
@@ -42,9 +41,10 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 9 4-4-4-4" />
                                 </svg>
-                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/crear_proyecto.html"
-                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Crear
-                                    Proyecto</a>
+                                <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/asignacion_de_proyectos.html"
+                                    class="ms-1 text-sm font-medium text-black hover:text-blue-600 md:ms-2 dark:text-black dark:hover:text-white">Asignacion
+                                    de
+                                    Proyectos</a>
                             </div>
                         </li>
                     </ol>
@@ -52,66 +52,92 @@
             </div>
 
             <div>
-                <div class="text-2xl p-4 font-bold m-8">
-                    FORMULARIO PARA CREAR PROYECTO
+                <div class="text-2xl ml-16 font-bold">
+                    ASIGNACION DE PROYECTOS
                 </div>
                 <!-- Contenido principal -->
-                <form class="max-w-sm mx-auto">
-                    <div class="mb-5">
-                        <label for="idproyecto" class="block mb-2 text-sm font-medium text-black">ID Proyecto</label>
-                        <input type="text" id="idproyecto"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="nombre" class="block mb-2 text-sm font-medium text-black">Nombre</label>
-                        <input type="text" id="nombre"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
-                    <div class="mb-5">
-                        <label for="descripcion" class="block mb-2 text-sm font-medium text-black">Descripcion</label>
-                        <textarea id="descripcion" rows="4"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required></textarea>
-                    </div>
-                    <div id="date-range-picker" date-rangepicker class="flex items-center">
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-start" name="start" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha inicio">
+                <div class="ml-16 p-4">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 bg-gray-50 p-4 rounded-lg shadow">
+                        <div>
+                            <label class="block text-sm font-medium mb-1" for="participante">Participante</label>
+                            <select id="participante" class="w-full border border-gray-300 rounded px-3 py-2">
+                                <option value="">Selecciona un participante</option>
+                                <option value="1001234567">Juan Carlos Gómez</option>
+                                <option value="1002345678">María Fernanda Rodríguez</option>
+                            </select>
                         </div>
-                        <span class="mx-4 text-gray-700">hasta</span>
-                        <div class="relative">
-                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                </svg>
-                            </div>
-                            <input id="datepicker-range-end" name="end" type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Fecha final">
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <label for="valor" class="block mb-2 text-sm font-medium text-black">Valor</label>
-                        <input type="text" id="valor"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-300 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            required />
-                    </div>
 
-                    <button type="submit"
-                        class=" text-white bg-lime-500 hover:bg-lime-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-lime-500 dark:hover:bg-lime-400 dark:focus:ring-blue-800">CREAR</button>
-                </form>
+                        <div>
+                            <label class="block text-sm font-medium mb-1" for="proyecto">Proyecto</label>
+                            <select id="proyecto" class="w-full border border-gray-300 rounded px-3 py-2">
+                                <option value="">Selecciona un proyecto</option>
+                                <option value="PRJ001">Sistema de Riego Automatizado</option>
+                                <option value="PRJ002">Plataforma de Tutorías Virtuales</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-1" for="rol">Rol</label>
+                            <input type="text" id="rol" placeholder="Ej. Líder, Desarrollador"
+                                class="w-full border border-gray-300 rounded px-3 py-2">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-1" for="fecha">Fecha de asignación</label>
+                            <input type="date" id="fecha" class="w-full border border-gray-300 rounded px-3 py-2">
+                        </div>
+
+                        <div class="md:col-span-2 flex justify-end mt-4">
+                            <button type="submit"
+                                class="bg-lime-500 text-white px-4 py-2 rounded hover:bg-lime-400">Asignar
+                                Proyecto</button>
+                        </div>
+                    </form>
+
+                    <div class="text-2xl font-bold">
+                        ASIGNACIONOS REALIZADAS
+                    </div>
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
+                        <table class="w-full text-sm text-left rtl:text-right text-black">
+                            <thead class="text-xs text-black uppercase bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3">Identificación</th>
+                                    <th class="px-6 py-3">Nombre</th>
+                                    <th class="px-6 py-3">Proyecto</th>
+                                    <th class="px-6 py-3">Rol</th>
+                                    <th class="px-6 py-3">Fecha</th>
+                                    <th class="px-6 py-3">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                    <td class="px-6 py-4">1001234567</td>
+                                    <td class="px-6 py-4">Juan Carlos Gómez</td>
+                                    <td class="px-6 py-4">Sistema de Riego Automatizado</td>
+                                    <td class="px-6 py-4">Líder</td>
+                                    <td class="px-6 py-4">2024-08-01</td>
+                                    <td class="px-6 py-4 space-x-2">
+                                        <button class="text-blue-600 hover:underline">Editar</button>
+                                        <button class="text-red-600 hover:underline">Eliminar</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                    <td class="px-6 py-4">1002345678</td>
+                                    <td class="px-6 py-4">María Fernanda Rodríguez</td>
+                                    <td class="px-6 py-4">Plataforma de Tutorías Virtuales</td>
+                                    <td class="px-6 py-4">Desarrolladora</td>
+                                    <td class="px-6 py-4">2024-07-20</td>
+                                    <td class="px-6 py-4 space-x-2">
+                                        <button class="text-blue-600 hover:underline">Editar</button>
+                                        <button class="text-red-600 hover:underline">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
@@ -166,7 +192,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/buscar-proyecto.html" class="flex items-center p-2 text-black rounded-lg  hover:bg-lime-100 group">
+                        <a href="http://127.0.0.1:5500/TALLER_TAILWINDS/buscar-proyecto.html"
+                            class="flex items-center p-2 text-black rounded-lg  hover:bg-lime-100 group">
                             <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill-rule="evenodd"
