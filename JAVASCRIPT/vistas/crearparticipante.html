@@ -1,0 +1,57 @@
+<!-- Breadcrumb -->
+<nav class="text-gray-500 text-sm mb-4">
+    <ol class="flex">
+        <li><a href="#" class="hover:underline">Inicio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-lime-600 font-semibold">Participantes</li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-lime-600 font-semibold">Crear Participante</li>
+    </ol>
+</nav>
+
+<!-- Título de la sección principal -->
+<section class="mb-6">
+    <h2 class="text-xl font-bold text-gray-800">Crear Participante</h2>
+</section>
+
+<!-- Formulario de creación de participante -->
+ <section class="bg-white rounded-lg shadow p-6 max-w-xl">
+  <form class="space-y-4">
+    <div>
+      <label for="identificacion" class="block text-gray-700 font-medium">Identificación</label>
+      <input type="text" id="identificacion" name="identificacion"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500"
+        required>
+    </div>
+    <div>
+      <label for="nombres" class="block text-gray-700 font-medium">Nombres</label>
+      <input type="text" id="nombres" name="nombres"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500"
+        required>
+    </div>
+    <div>
+      <label for="apellidos" class="block text-gray-700 font-medium">Apellidos</label>
+      <input type="text" id="apellidos" name="apellidos"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500"
+        required>
+    </div>
+    <div>
+      <label for="email" class="block text-gray-700 font-medium">Email</label>
+      <input type="email" id="email" name="email"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500"
+        required>
+    </div>
+    <div>
+      <label for="celular" class="block text-gray-700 font-medium">Celular</label>
+      <input type="tel" id="celular" name="celular"
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500"
+        required>
+    </div>
+    <div>
+      <button type="submit"
+        class="w-full bg-lime-500 text-white py-2 rounded-md font-semibold hover:bg-lime-400 hover:text-gray-700 transition">
+        Crear Participante
+      </button>
+    </div>
+  </form>
+</section>

@@ -106,8 +106,61 @@ function Inicializarvista(vista) {
     }
 
     // Vista crearParticipante
-    
+    if (vista === 'crearparticipante') {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Prevenir recarga del formulario
 
+            // Capturar datos del formulario
+            const dto = {
+                identificacion: form.identificacion.value,
+                nombres: form.nombres.value,
+                apellidos: form.apellidos.value,
+                email: form.email.value,
+                celular: form.celular.value
+            };
+
+            participantes.push(dto); // Guardar participante en el arreglo
+            console.log('Participantes:', participantes);
+            form.reset();
+            alert('Participante creado');
+        });
+    }
+
+    // Vista listadodeparticipantes
+    if (vista === 'listadodeparticipantes') {
+        const tabla = document.querySelector('#tablaParticipantes');
+
+        // Limpia la tabla antes de llenarla
+        tabla.innerHTML = '';
+
+        // Verifica si hay participantes
+        if (participantes.length === 0) {
+            tabla.innerHTML = `
+      <tr>
+        <td colspan="5" class="text-center p-4 text-gray-500">No hay participantes registrados.</td>
+      </tr>
+    `;
+            return;
+        }
+
+        // Genera las filas de la tabla
+        participantes.forEach(participante => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+      <td class="border p-2">${participante.identificacion}</td>
+      <td class="border p-2">${participante.nombres}</td>
+      <td class="border p-2">${participante.apellidos}</td>
+      <td class="border p-2">${participante.email}</td>
+      <td class="border p-2">${participante.celular}</td>
+    `;
+            tabla.appendChild(fila);
+        });
+
+    }
+
+    // Vista asignaciondeproyectos
+    
 
 }
 
