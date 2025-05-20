@@ -1,6 +1,7 @@
 // variables y arrays
 const proyectos = [];
 const participantes = [];
+const asignaciones = [];
 
 // Helper: selecciona main
 const contenedor = document.querySelector('main');
@@ -78,7 +79,7 @@ function Inicializarvista(vista) {
         const resultado = document.querySelector('#resultado');
 
         btnBuscar.addEventListener('click', e => {
-            e.preventDefault(); // Evita la recarga de la página
+            e.preventDefault();
 
             const idBuscado = inputBusqueda.value.trim();
             const proyecto = proyectos.find(p => p.id === idBuscado);
@@ -109,9 +110,8 @@ function Inicializarvista(vista) {
     if (vista === 'crearparticipante') {
         const form = document.querySelector('form');
         form.addEventListener('submit', e => {
-            e.preventDefault(); // Prevenir recarga del formulario
+            e.preventDefault();
 
-            // Capturar datos del formulario
             const dto = {
                 identificacion: form.identificacion.value,
                 nombres: form.nombres.value,
@@ -160,7 +160,80 @@ function Inicializarvista(vista) {
     }
 
     // Vista asignaciondeproyectos
-    
+    if (vista === 'asignaciondeproyectos') {
+        const form = document.querySelector('#asignarProyectoForm');
+        const selectProyectos = document.querySelector('#proyecto');
+        const selectParticipantes = document.querySelector('#participante');
+        const tabla = document.querySelector('#tablaasignaciones');
+
+        // Cargar select de proyectos
+        proyectos.forEach(p => {
+            const option = document.createElement('option');
+            option.value = p.id;
+            option.textContent = p.nombre;
+            selectProyectos.appendChild(option);
+        });
+
+        // Cargar select de participantes
+        participantes.forEach(p => {
+            const option = document.createElement('option');
+            option.value = p.identificacion;
+            option.textContent = `${p.nombres} ${p.apellidos}`;
+            selectParticipantes.appendChild(option);
+        });
+
+        // Cargar tabla 
+        function mostrarAsignaciones() {
+            tabla.innerHTML = '';
+
+            if (asignaciones.length === 0) {
+                tabla.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-center p-4 text-gray-500">
+                        No hay asignaciones registradas.
+                    </td>
+                </tr>
+            `;
+                return;
+            }
+
+            asignaciones.forEach(a => {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                <td class="px-4 py-2 border">${a.identificacion}</td>
+                <td class="px-4 py-2 border">${a.nombreParticipante}</td>
+                <td class="px-4 py-2 border">${a.nombreProyecto}</td>
+                <td class="px-4 py-2 border">${a.rol}</td>
+                <td class="px-4 py-2 border">${a.fecha}</td>
+            `;
+                tabla.appendChild(fila);
+            });
+        }
+
+        // Asignar proyecto
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const dto = {
+                identificacion: selectParticipantes.value,
+                nombreParticipante: selectParticipantes.options[selectParticipantes.selectedIndex].text,
+                proyectoId: selectProyectos.value,
+                nombreProyecto: selectProyectos.options[selectProyectos.selectedIndex].text,
+                rol: document.getElementById('rol').value,
+                fecha: document.getElementById('fecha').value
+            };
+
+            asignaciones.push(dto); // Guardar en el arreglo
+            mostrarAsignaciones();  // Actualizar la tabla
+            form.reset();
+            alert('Proyecto asignado correctamente');
+        });
+
+        // Mostrar las asignaciones
+        mostrarAsignaciones();
+    }
+
+
 
 }
 

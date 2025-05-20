@@ -12,4 +12,67 @@
     <h2 class="text-xl font-bold text-gray-800">Asignacion de Proyectos</h2>
 </section>
 
-<!--  -->
+<!-- Asignar proyecto -->
+<section class="mb-6">
+    <form id="asignarProyectoForm" class="mt-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label for="proyecto" class="block text-sm font-medium text-gray-700">Proyecto</label>
+                <select id="proyecto" name="proyecto"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-lime-500 focus:border-lime-500" required>
+                    <option value="">Seleccione un proyecto</option>
+                    <!-- Opciones de proyectos  cargadas con JavaScript -->
+                </select>
+            </div>
+            <div>
+                <label for="participante" class="block text-sm font-medium text-gray-700">Participante</label>
+                <select id="participante" name="participante"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-lime-500 focus:border-lime-500" required>
+                    <option value="">Seleccione un Participante</option>
+                    <!-- Opciones de participantes cargadas con JavaScript -->
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-1" for="rol">Rol</label>
+                <input type="text" id="rol" placeholder="Ej. Líder, Desarrollador"
+                    class="w-full border border-gray-300 rounded px-3 py-2" required>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-1" for="fecha">Fecha de asignación</label>
+                <input type="date" id="fecha" class="w-full border border-gray-300 rounded px-3 py-2" required>
+            </div>
+
+            <div class="md:col-span-2 flex justify-end mt-4">
+                <button type="submit" class="bg-lime-500 text-white px-4 py-2 rounded hover:bg-lime-400">Asignar
+                    Proyecto</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- Tabla de proyectos asignados -->
+<section class="mb-1">
+    <h2 class="text-xl font-bold text-gray-800">Proyectos Asignados</h2>
+</section>
+<section class="p-4">
+    <div class="overflow-x-auto rounded-lg shadow-md">
+        <table class="min-w-full divide-y divide-gray-200 bg-white text-sm text-gray-700">
+            <thead class="bg-lime-500">
+                <tr>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">
+                        Ientificacion</th>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">Nombre
+                    </th>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">Proyecto
+                    </th>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">Rol</th>
+                    <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="tablaasignaciones" class="divide-y divide-gray-100">
+                <!-- Las asignaciones se insertarán dinámicamente aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</section>
