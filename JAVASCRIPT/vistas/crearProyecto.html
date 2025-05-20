@@ -1,0 +1,61 @@
+<!-- Breadcrumb -->
+<nav class="text-gray-500 text-sm mb-4">
+    <ol class="flex">
+        <li><a href="#" class="hover:underline">Inicio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-lime-600 font-semibold">Crear Proyecto</li>
+    </ol>
+</nav>
+
+<!-- Título de la sección principal -->
+<section class="mb-6">
+    <h2 class="text-xl font-bold text-gray-800">Crear Proyecto</h2>
+</section>
+
+<!-- Formulario de creación del proyecto -->
+<section class="bg-white rounded-lg shadow p-6 max-w-xl">
+    <form class="space-y-4">
+        <div>
+            <label for="idProyecto" class="block text-gray-700 font-medium">ID Proyecto</label>
+            <input type="text" id="idProyecto" name="idProyecto"
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
+        <div>
+            <label for="nombre" class="block text-gray-700 font-medium">Nombre</label>
+            <input type="text" id="nombre" name="nombre"
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
+        <div>
+            <label for="descripcion" class="block text-gray-700 font-medium">Descripción</label>
+            <textarea id="descripcion" name="descripcion" rows="3"
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+        <div class="flex gap-4">
+            <div class="flex-1">
+                <label for="fechaInicio" class="block text-gray-700 font-medium">Fecha inicio</label>
+                <input type="date" id="fechaInicio" name="fechaInicio"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    required>
+            </div>
+            <div class="flex-1">
+                <label for="fechaFinal" class="block text-gray-700 font-medium">Fecha final</label>
+                <input type="date" id="fechaFinal" name="fechaFinal"
+                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                    required>
+            </div>
+        </div>
+        <div>
+            <label for="valor" class="block text-gray-700 font-medium">Valor</label>
+            <input type="number" id="valor" name="valor"
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required>
+        </div>
+        <div>
+            <button type="submit"
+                class="w-full bg-lime-500 text-white py-2 rounded-md font-semibold hover:bg-lime-400 hover:text-gray-700 transition">Crear
+                Proyecto</button>
+        </div>
+    </form>
+</section>
