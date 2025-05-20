@@ -14,26 +14,28 @@
     <!-- Encabezado -->
     <header class="bg-lime-500 text-white p-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold">PANEL DE ADMINISTRACION</h1>
-    </header>
-
-    <div class="flex flex-1">
-        <!-- Sección principal -->
-        <main class="flex-1 p-8">
-            
-        </main>
-
-        <!-- Barra lateral a la derecha -->
-        <input type="checkbox" id="toggle-menu" class="hidden peer" />
-        <label for="toggle-menu" class="md:hidden block cursor-pointer">
+        <label for="toggle-menu" class="md:hidden fixed top-4 right-4 z-50 cursor-pointer">
             <svg class="w-8 h-8 text-white bg-lime-500 p-1 rounded-md" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </label>
-        <aside
-            class=" hidden peer-checked:block md:block sticky w-65 bg-lime-500 border-l border-gray-200 p-6 flex flex-col gap-4">
+    </header>
+
+    <div class="flex flex-1">
+        <!-- Sección principal -->
+        <main class="flex-1 p-4 md:p-8 max-w-screen-xl mx-auto">
+
+        </main>
+
+        <!-- Barra lateral a la derecha -->
+        <input type="checkbox" id="toggle-menu" class="hidden peer" />
+        <aside class="peer-checked:translate-x-0 translate-x-full transition-transform duration-300 fixed top-0 right-0 h-full w-64 bg-lime-500 p-6 flex flex-col gap-4
+           md:translate-x-0 md:static md:h-auto md:w-64 md:block">
+
             <nav class="flex flex-col gap-2">
-                <a href="#" data-view="crearProyecto" class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
+                <a href="#" data-view="crearProyecto"
+                    class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
                     <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
@@ -41,7 +43,8 @@
                             clip-rule="evenodd" />
                     </svg>Crear Proyecto
                 </a>
-                <a href="#" data-view="listadodeproyectos" class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
+                <a href="#" data-view="listadodeproyectos"
+                    class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
                     <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
@@ -52,7 +55,8 @@
                             clip-rule="evenodd" />
                     </svg>Listado de
                     proyectos</a>
-                <a href="#" data-view="buscarproyecto" class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
+                <a href="#" data-view="buscarproyecto"
+                    class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
                     <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
@@ -76,14 +80,17 @@
                         </svg>
                     </summary>
                     <div class="flex flex-col pl-4 mt-2 gap-1">
-                        <a href="#" data-view="crearparticipante" class="text-gray-800 hover:bg-lime-200 px-3 py-1 rounded transition">Crear
+                        <a href="#" data-view="crearparticipante"
+                            class="text-gray-800 hover:bg-lime-200 px-3 py-1 rounded transition">Crear
                             participante</a>
-                        <a href="#" data-view="listadodeparticipantes" class="text-gray-800 hover:bg-lime-200 px-3 py-1 rounded transition">Listado de
+                        <a href="#" data-view="listadodeparticipantes"
+                            class="text-gray-800 hover:bg-lime-200 px-3 py-1 rounded transition">Listado de
                             participantes</a>
                     </div>
                 </details>
 
-                <a href="#" data-view="asignaciondeproyectos" class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
+                <a href="#" data-view="asignaciondeproyectos"
+                    class="flex text-gray-800 hover:bg-lime-100 px-3 py-2 rounded transition font-medium">
                     <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
@@ -175,7 +182,7 @@
             </div>
         </div>
     </footer>
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
