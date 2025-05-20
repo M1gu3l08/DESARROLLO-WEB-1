@@ -72,7 +72,42 @@ function Inicializarvista(vista) {
     }
 
     // Vista BuscarProyecto
+    if (vista === 'buscarproyecto') {
+        const inputBusqueda = document.querySelector('#idProyecto');
+        const btnBuscar = document.querySelector('#botonBuscar');
+        const resultado = document.querySelector('#resultado');
+
+        btnBuscar.addEventListener('click', e => {
+            e.preventDefault(); // Evita la recarga de la página
+
+            const idBuscado = inputBusqueda.value.trim();
+            const proyecto = proyectos.find(p => p.id === idBuscado);
+
+            if (proyecto) {
+                resultado.innerHTML = `
+        <div class="p-4 border rounded shadow-sm bg-green-50">
+          <h3 class="text-lg font-semibold text-gray-800">Proyecto encontrado</h3>
+          <p><strong>ID:</strong> ${proyecto.id}</p>
+          <p><strong>Nombre:</strong> ${proyecto.nombre}</p>
+          <p><strong>Descripción:</strong> ${proyecto.descripcion}</p>
+          <p><strong>Fecha Inicio:</strong> ${proyecto.fechaInicio}</p>
+          <p><strong>Fecha Final:</strong> ${proyecto.fechaFinal}</p>
+          <p><strong>Valor:</strong> $${proyecto.valor}</p>
+        </div>
+      `;
+            } else {
+                resultado.innerHTML = `
+        <div class="p-4 border rounded shadow-sm bg-red-100 text-red-700">
+          No se encontró un proyecto con ese ID.
+        </div>
+      `;
+            }
+        });
+    }
+
+    // Vista crearParticipante
     
+
 
 }
 
