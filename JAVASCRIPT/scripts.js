@@ -1,12 +1,12 @@
-// variables y arrays
+// arreglos para las tablas
 const proyectos = [];
 const participantes = [];
 const asignaciones = [];
 
-// Helper: selecciona main
+// Seleccionar main para cambiar su contenido
 const contenedor = document.querySelector('main');
 
-// Cargar vista HTML por fetch
+// Cargar vista HTML usando fetch
 function cargarvista(vista) {
     fetch(`vistas/${vista}.html`)
         .then(res => res.text())
@@ -17,7 +17,7 @@ function cargarvista(vista) {
         .catch(console.error);
 }
 
-// Inicializar listeners tras cargar la vista
+// Inicializar listeners (oyente de evento) tras cargar la vista
 function Inicializarvista(vista) {
     // Vista crearProyecto
     if (vista === 'crearProyecto') {
@@ -246,5 +246,5 @@ document.querySelectorAll('aside nav a').forEach(a => {
     });
 });
 
-// Al inicio carga con la vista por defecto
+// Al inicio carga la vista de crearProyecto
 cargarvista('crearProyecto');
