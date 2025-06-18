@@ -1,0 +1,67 @@
+<!-- Breadcrumb -->
+<nav class="text-gray-500 text-sm mb-4">
+    <ol class="flex">
+        <li><a href="#" class="hover:underline">Inicio</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-sky-600 font-semibold">Datos</li>
+    </ol>
+</nav>
+
+<!-- Título de la sección principal -->
+<section class="mb-6">
+    <h2 class="text-xl font-bold text-gray-800">Listado de Datos</h2>
+</section>
+
+<!-- Filtros de búsqueda -->
+<section class="mb-6">
+    <form id="filtros" class="flex flex-col md:flex-row gap-4 m-8">
+        <div class="flex">
+            <h1 class=" font-bold ">Filtros:</h1>
+        </div>
+        <div class="flex-1">
+            <label for="iddepto" class="block text-sm font-medium text-gray-700">Departamento</label>
+            <select id="iddepto" name="iddepto" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500">
+                <option value="">Seleccione un departamento</option>
+                <!-- Opciones de departamentos se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="flex-1">
+            <label for="idmpio" class="block text-sm font-medium text-gray-700">Municipio</label>
+            <select id="idmpio" name="idmpio" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500">
+                <option value="">Seleccione un municipio</option>
+                <!-- Opciones de municipios se llenarán dinámicamente -->
+            </select>
+        </div>
+        <div class="flex-1">
+            <label for="año" class="block text-sm font-medium text-gray-700">Año</label>
+            <select id="año" name="año" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500">
+                <option value="">Seleccione un Año</option>
+                <!-- Opciones de tipos de régimen se llenarán dinámicamente -->
+            </select>
+        </div>
+    </form>
+</section>
+
+<!-- Tabla de datos -->
+<section class="p-4">
+  <div class="overflow-x-auto rounded-lg shadow-md">
+    <table class="min-w-full divide-y divide-gray-200 bg-white text-sm text-gray-700">
+      <thead class="bg-sky-500">
+        <tr>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">iddepto</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">nomdepto</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">idmpio</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">nompio</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">tiporegimen</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">tipopoblación</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">año</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">mes</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">total</th>
+        </tr>
+      </thead>
+      <tbody id="tabladatos" class="divide-y divide-gray-100">
+
+      </tbody>
+    </table>
+  </div>
+</section>
